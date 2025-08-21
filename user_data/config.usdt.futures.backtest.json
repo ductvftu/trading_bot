@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.freqtrade.io/schema.json",
+  "max_open_trades": -1,
+  "stake_currency": "USDT",
+  "stake_amount": 100,
+  "tradable_balance_ratio": 1.0,
+  "timeframe": "1m",
+  "dry_run": true,
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "pair_whitelist": [
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "ADA/USDT:USDT",
+      "LTC/USDT:USDT",
+      "SUI/USDT:USDT",
+      "LINK/USDT:USDT"
+    ],
+    "unknown_fee_rate": 0.0007
+  },
+
+  "fee": 0.0007,
+
+  "pairlists": [
+    { "method": "StaticPairList" }
+  ],
+
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "market",
+    "stoploss_on_exchange": false
+  },
+  "order_time_in_force": { "entry": "GTC", "exit": "GTC" },
+
+  "entry_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "same",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "internals": { "process_throttle_secs": 5 }
+}
+
+
