@@ -48,7 +48,7 @@ class EMATrend1mStrategy(IStrategy):
     min_slope: float = 0.0045  # 0.15% over slope_len candles
     min_ema_sep: float = 0.0005  # EMA10 vs EMA30 separation
     # Trading session filter (UTC hours). Default: Asian session 23:00–08:59 UTC
-    use_asian_session_only: bool = False
+    use_asian_session_only: bool = True
     asian_session_hours_utc: list[int] = [23, 0, 1, 2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]
     # Volume zone filter
     use_volume_zone: bool = True
